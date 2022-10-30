@@ -61,7 +61,7 @@ namespace stackPractice
             //output=> counts how many time x appears in stack  and removes them
             if (!Exists(stack, x))
                 return 0;
-
+// חוזר המון על פעולות
             int count = 0;
             Stack<int> copy = new Stack<int>();
             while (!stack.IsEmpty())
@@ -157,7 +157,9 @@ namespace stackPractice
                     copy.Pop();
                     continue;
                 }
+                //לדעתי יותר נכון אחרת
                 s.Push(copy.Pop());
+                
             }
 
             return biggest;
@@ -186,6 +188,7 @@ namespace stackPractice
                     return false;
 
             return true;
+            // אני מעדיפה לא לעבוד עם מערך!
         }
         static Stack<int> Merge(Stack<int> s1, Stack<int> s2)
         {
